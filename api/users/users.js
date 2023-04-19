@@ -7,7 +7,7 @@ const getUsers = async () => {
     }
 
     const usersData = await res.json();
-    console.log(usersData);
+
     return usersData;
   } catch (err) {
     console.error("Error fetching products data:", err);
