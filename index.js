@@ -1,3 +1,3 @@
-const { getUsers } = require("./api");
+const { aggregateCategoryPrices } = require("./utils");
 
-getUsers();
+aggregateCategoryPrices().then((res) => console.log(res));
