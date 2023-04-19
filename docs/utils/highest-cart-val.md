@@ -13,7 +13,11 @@ User with highest cart value.
 
 ## Data source
 
-<b>URLS:</b> [https://fakestoreapi.com/products/:id, https://fakestoreapi.com/users/:id, https://fakestoreapi.com/carts/?startdate=2000-01-01&enddate=2023-04-07]
+<b>URL's:</b>
+
+- https://fakestoreapi.com/products/:id
+- https://fakestoreapi.com/users/:id
+- https://fakestoreapi.com/carts/?startdate=2000-01-01&enddate=2023-04-07
 
 <b>URL Params:</b> `id`, where `id=[integer]`
 

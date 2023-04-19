@@ -20,6 +20,8 @@ const furthestUsers = async () => {
   });
 
   let maxDistance = 0;
+  let firstUser = {};
+  let secondUser = {};
 
   for (let i = 0; i < usersWithGeolocation.length; i++) {
     for (let j = i + 1; j < usersWithGeolocation.length; j++) {
@@ -30,9 +32,16 @@ const furthestUsers = async () => {
 
       if (maxDistance < distanceBetweenUsers)
         maxDistance = distanceBetweenUsers;
+      firstUser = usersWithGeolocation[i]["name"];
+      secondUser = usersWithGeolocation[j]["name"];
     }
   }
-  return maxDistance;
+
+  return {
+    distanceBetween: maxDistance,
+    firstUser,
+    secondUser,
+  };
 };
 
 module.exports = furthestUsers;
