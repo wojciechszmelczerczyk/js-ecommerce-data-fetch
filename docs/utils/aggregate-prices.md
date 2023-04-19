@@ -4,6 +4,13 @@
 
 Sum prices for product category.
 
+## Table of contents
+
+- [Data source](#data-source)
+- [Input data](#input-data)
+- [Output data](#output-data)
+- [Code](#code)
+
 ## Data source
 
 <b>URL:</b> https://fakestoreapi.com/products
@@ -97,6 +104,35 @@ Result schema of first 5 objects.
   { "category": "men's clothing", "total": 204.23 },
   { "category": "jewelery", "total": 695 }
 ]
+```
+
+</details>
+
+## Code
+
+This section presents source code of aggregate prices util function implementation.
+
+<details>
+
+<summary>code</summary>
+
+```javascript
+const aggregateCategoryPrices = async () => {
+  const products = await getProducts();
+
+  // pick only category and price from product schema
+  const productsWithCategoryAndPrice = _.map(products, (product) =>
+    _.pick(product, ["category", "price"])
+  );
+
+  // sum prices for specific categories
+  const res = _(productsWithCategoryAndPrice)
+    .groupBy("category")
+    .map((items, category) => ({ category, total: _.sumBy(items, "price") }))
+    .value();
+
+  return res;
+};
 ```
 
 </details>

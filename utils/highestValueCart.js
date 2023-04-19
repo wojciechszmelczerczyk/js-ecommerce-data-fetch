@@ -17,7 +17,7 @@ const highestCartValue = async () => {
         );
         const totalPrice = prices.reduce((acc, curr) => acc + curr, 0);
         return {
-          userName: name,
+          fullName: name,
           totalPrice: totalPrice,
         };
       })
