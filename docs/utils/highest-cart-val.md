@@ -40,7 +40,7 @@ Result present credentials of user who has highest cart value.
 
 ## Code
 
-This section presents source code of aggregate prices util function implementation.
+This section presents source code of user with highest cart value util function implementation.
 
 <details>
 
