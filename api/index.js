@@ -1,5 +1,7 @@
-const getUsers = require("./users");
-const getProducts = require("./products");
-const getCarts = require("./carts");
+const getUsers = require("./users/users");
+const getUser = require("./users/user");
+const getProducts = require("./products/products");
+const getProduct = require("./products/product");
+const getCarts = require("./carts/carts");
 
-module.exports = { getUsers, getProducts, getCarts };
+module.exports = { getUsers, getUser, getProducts, getProduct, getCarts };

@@ -1,5 +1,5 @@
 const _ = require("lodash");
-const getProducts = require("../api/products");
+const { getProducts } = require("../api");
 
 const aggregateCategoryPrices = async () => {
   const products = await getProducts();

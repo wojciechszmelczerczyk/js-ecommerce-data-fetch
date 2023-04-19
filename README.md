@@ -26,6 +26,7 @@ Table below show util functions which perform logic on fetched data.
 |                              Function                              |
 | :----------------------------------------------------------------: |
 | [`Aggregate prices by category`](./docs/utils/aggregate-prices.md) |
+|      [`Highest cart value`](./docs/utils/highest-cart-val.md)      |
 
 ## To run
 
