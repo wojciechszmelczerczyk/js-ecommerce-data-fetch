@@ -13,7 +13,7 @@ Furthest distance between users calculated by geolocation points.
 
 ## Data source
 
-<b>URL's:</b> https://fakestoreapi.com/users
+<b>URL:</b> https://fakestoreapi.com/users
 
 ## Input data
 
