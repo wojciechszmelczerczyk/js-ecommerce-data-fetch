@@ -23,9 +23,9 @@ Software which fetch e-commerce like data and perform logic on it.
 
 Table below show util functions which perform logic on fetched data.
 
-|                           Function                           |
-| :----------------------------------------------------------: |
-| [`Aggregate prices by category`](./docs/aggregate-prices.md) |
+|                              Function                              |
+| :----------------------------------------------------------------: |
+| [`Aggregate prices by category`](./docs/utils/aggregate-prices.md) |
 
 ## To run
 
