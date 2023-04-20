@@ -36,7 +36,7 @@ Result present credentials of user who has highest cart value as well as total p
 ```json
 {
   "fullName": { "firstname": "john", "lastname": "doe" },
-  "totalPrice": 827.25
+  "totalPrice": 2578.7
 }
 ```
 
