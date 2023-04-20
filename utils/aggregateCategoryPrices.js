@@ -1,8 +1,11 @@
+const { config } = require("dotenv");
+const { getAll } = require("../api");
 const _ = require("lodash");
-const { getProducts } = require("../api");
+
+config({ path: "../.env" });
 
 const aggregateCategoryPrices = async () => {
-  const products = await getProducts();
+  const products = await getAll(process.env.PRODUCTS_URL);
 
   // pick only category and price from product schema
   const productsWithCategoryAndPrice = _.map(products, (product) =>
@@ -17,5 +20,7 @@ const aggregateCategoryPrices = async () => {
 
   return res;
 };
+
+aggregateCategoryPrices();
 
 module.exports = aggregateCategoryPrices;

@@ -1,9 +1,12 @@
-const { getUsers } = require("../api");
+const { config } = require("dotenv");
+const { getAll } = require("../api");
 const { getDistanceBetween } = require("geolocation-distance-between");
 const _ = require("lodash");
 
+config({ path: "../.env" });
+
 const furthestUsers = async () => {
-  const users = await getUsers();
+  const users = await getAll(process.env.USERS_URL);
 
   const usersWithGeolocation = _.map(users, (user) => {
     const geolocation = _.chain(user.address.geolocation)

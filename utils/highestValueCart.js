@@ -1,17 +1,21 @@
+const { config } = require("dotenv");
+const { getAll, getOne } = require("../api");
 const _ = require("lodash");
 
-const { getCarts, getProduct, getUser } = require("../api");
+config({ path: "../.env" });
 
 const highestCartValue = async () => {
   try {
-    const carts = await getCarts();
+    const carts = await getAll(
+      `${process.env.CARTS_URL}${process.env.CARTS_DATE_QUERY_STR}`
+    );
 
     const result = await Promise.all(
       _.map(carts, async ({ userId, products }) => {
-        const { name } = await getUser(userId);
+        const { name } = await getOne(process.env.USERS_URL, userId);
         const prices = await Promise.all(
           _.map(products, async ({ productId }) => {
-            const { price } = await getProduct(productId);
+            const { price } = await getOne(process.env.PRODUCTS_URL, productId);
             return price;
           })
         );
