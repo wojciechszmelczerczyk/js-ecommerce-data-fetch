@@ -10,6 +10,7 @@
   "author": "Wojciech Szmelczerczyk <szmelczerczykwojciech@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "geolocation-distance-between": "^0.1.0",
     "lodash": "^4.17.21"
   }
