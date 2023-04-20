@@ -32,10 +32,10 @@ You can click specific endpoint in order to get more in-depth information about 
 
 Additionally you can click function in order to check implementation.
 
-| Method |               Endpoint                |         Function         |
-| :----: | :-----------------------------------: | :----------------------: |
-| `GET`  |   [`/resources`](./docs/api/all.md)   | [getAll](/api/getAll.js) |
-| `GET`  | [`/resources/:id`](./docs/api/one.md) | [getOne](/api/getOne.js) |
+| Method |               Endpoints               |          Function          |
+| :----: | :-----------------------------------: | :------------------------: |
+| `GET`  |   [`/resources`](./docs/api/all.md)   | [`getAll`](/api/getAll.js) |
+| `GET`  | [`/resources/:id`](./docs/api/one.md) | [`getOne`](/api/getOne.js) |
 
 ## Utils
 
@@ -67,7 +67,7 @@ Install dependencies.
 npm i
 ```
 
-Create following `.env` in project root directory.
+Create following `.env` file in project root directory.
 
 ```conf
 BASE_URL=https://fakestoreapi.com
