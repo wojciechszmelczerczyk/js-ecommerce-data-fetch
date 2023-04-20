@@ -11,6 +11,7 @@ Software which fetch e-commerce like data and perform logic on it.
 - [API](#api)
 - [Utils](#utils)
 - [To run](#to-run)
+- [Tests](#tests)
 
 ## Techstack
 
@@ -84,3 +85,5 @@ Run server.
 ```sh
 npm run start
 ```
+
+## Tests

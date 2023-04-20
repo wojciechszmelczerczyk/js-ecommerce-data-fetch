@@ -4,7 +4,8 @@
   "description": "Simple app to fetch data from third party apis",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ."
+    "start": "nodemon .",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Wojciech Szmelczerczyk <szmelczerczykwojciech@gmail.com>",
@@ -13,5 +14,8 @@
     "dotenv": "^16.0.3",
     "geolocation-distance-between": "^0.1.0",
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
