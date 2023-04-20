@@ -79,7 +79,6 @@ describe("GET /products/:id", () => {
       // Assert that the result is an array
       expect(result).toBeTruthy();
     } catch (err) {
-      console.log(err.message);
       expect(err.message).toBe(
         `Please provied id of integer value, ${productId} is not an integer!`
       );

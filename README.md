@@ -27,6 +27,7 @@ Software which fetch e-commerce like data and perform logic on it.
 - [Lodash](https://www.npmjs.com/package/lodash)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
 - [Geolocation Distance](https://www.npmjs.com/package/geolocation-distance-between)
+- [Ajv](https://www.npmjs.com/package/ajv)
 
 ## API
 
