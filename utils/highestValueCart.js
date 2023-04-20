@@ -2,7 +2,7 @@ const { config } = require("dotenv");
 const { getAll, getOne } = require("../api");
 const _ = require("lodash");
 
-config({ path: "../.env" });
+config();
 
 const highestCartValue = async () => {
   try {

@@ -8,6 +8,7 @@ Software which fetch e-commerce like data and perform logic on it.
 
 - [Techstack](#techstack)
 - [Libraries](#libraries)
+- [API](#api)
 - [Utils](#utils)
 - [To run](#to-run)
 
@@ -18,6 +19,19 @@ Software which fetch e-commerce like data and perform logic on it.
 ## Libraries
 
 - [Lodash](https://www.npmjs.com/package/lodash)
+- [Dotenv](https://www.npmjs.com/package/dotenv)
+- [Geolocation Distance](https://www.npmjs.com/package/geolocation-distance-between)
+
+## API
+
+Table below present functions which are responsible for data fetching.
+
+
+
+| METHOD |               Endpoint                |
+| :----: | :-----------------------------------: |
+| `GET`  |   [`/resources`](./docs/api/all.md)   |
+| `GET`  | [`/resources/:id`](./docs/api/one.md) |
 
 ## Utils
 
@@ -47,6 +61,18 @@ Install dependencies.
 
 ```sh
 npm i
+```
+
+Create following `.env` in project root directory.
+
+```conf
+BASE_URL=https://fakestoreapi.com
+
+CARTS_URL=carts
+PRODUCTS_URL=products
+USERS_URL=users
+
+CARTS_DATE_QUERY_STR=?startdate=2000-01-01&enddate=2023-04-07
 ```
 
 Run server.

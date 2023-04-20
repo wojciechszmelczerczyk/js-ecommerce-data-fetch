@@ -16,7 +16,7 @@ aggregateCategoryPrices()
 highestValueCart()
   .then((res) => {
     console.log("\n================================");
-    console.log("Highest value cart");
+    console.log("User with highest cart value");
     console.log("================================");
     console.log(res);
   })
@@ -25,7 +25,7 @@ highestValueCart()
 furthestUsers()
   .then((res) => {
     console.log("\n================================");
-    console.log("Furthest users");
+    console.log("Furthest distance between users");
     console.log("================================");
     console.log(res);
   })

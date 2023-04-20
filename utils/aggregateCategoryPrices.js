@@ -2,7 +2,7 @@ const { config } = require("dotenv");
 const { getAll } = require("../api");
 const _ = require("lodash");
 
-config({ path: "../.env" });
+config();
 
 const aggregateCategoryPrices = async () => {
   const products = await getAll(process.env.PRODUCTS_URL);
@@ -20,7 +20,5 @@ const aggregateCategoryPrices = async () => {
 
   return res;
 };
-
-aggregateCategoryPrices();
 
 module.exports = aggregateCategoryPrices;

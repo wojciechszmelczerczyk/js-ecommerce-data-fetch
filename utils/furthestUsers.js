@@ -3,7 +3,7 @@ const { getAll } = require("../api");
 const { getDistanceBetween } = require("geolocation-distance-between");
 const _ = require("lodash");
 
-config({ path: "../.env" });
+config();
 
 const furthestUsers = async () => {
   const users = await getAll(process.env.USERS_URL);
