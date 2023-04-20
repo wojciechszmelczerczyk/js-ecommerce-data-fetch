@@ -30,10 +30,12 @@ Table below presents functions which are responsible for data fetching from REST
 
 You can click specific endpoint in order to get more in-depth information about usage.
 
-| METHOD |               Endpoint                |
-| :----: | :-----------------------------------: |
-| `GET`  |   [`/resources`](./docs/api/all.md)   |
-| `GET`  | [`/resources/:id`](./docs/api/one.md) |
+Additionally you can click function in order to check implementation.
+
+| Method |               Endpoint                |         Function         |
+| :----: | :-----------------------------------: | :----------------------: |
+| `GET`  |   [`/resources`](./docs/api/all.md)   | [getAll](/api/getAll.js) |
+| `GET`  | [`/resources/:id`](./docs/api/one.md) | [getOne](/api/getOne.js) |
 
 ## Utils
 

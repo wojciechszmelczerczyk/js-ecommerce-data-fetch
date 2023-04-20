@@ -110,29 +110,4 @@ Result schema of first 5 objects.
 
 ## Code
 
-This section presents source code of aggregate prices util function implementation.
-
-<details>
-
-<summary>code</summary>
-
-```javascript
-const aggregateCategoryPrices = async () => {
-  const products = await getProducts();
-
-  // pick only category and price from product schema
-  const productsWithCategoryAndPrice = _.map(products, (product) =>
-    _.pick(product, ["category", "price"])
-  );
-
-  // group by category and sum prices for this category
-  const res = _(productsWithCategoryAndPrice)
-    .groupBy("category")
-    .map((items, category) => ({ category, total: _.sumBy(items, "price") }))
-    .value();
-
-  return res;
-};
-```
-
-</details>
+[aggregateCategoryPrices](/utils/aggregateCategoryPrices.js)

@@ -44,41 +44,4 @@ Result present credentials of user who has highest cart value as well as total p
 
 ## Code
 
-This section presents source code of user with highest cart value util function implementation.
-
-<details>
-
-<summary>code</summary>
-
-```javascript
-const highestCartValue = async () => {
-  try {
-    const carts = await getCarts();
-
-    const result = await Promise.all(
-      _.map(carts, async ({ userId, products }) => {
-        const { name } = await getUser(userId);
-        const prices = await Promise.all(
-          _.map(products, async ({ productId }) => {
-            const { price } = await getProduct(productId);
-            return price;
-          })
-        );
-        const totalPrice = prices.reduce((acc, curr) => acc + curr, 0);
-        return {
-          fullName: name,
-          totalPrice: totalPrice,
-        };
-      })
-    );
-
-    const highestValueCart = _.maxBy(result, "totalPrice");
-
-    return highestValueCart;
-  } catch (err) {
-    console.log(err.message);
-  }
-};
-```
-
-</details>
+[highestValueCart](/utils/highestValueCart.js)

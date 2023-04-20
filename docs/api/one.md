@@ -16,3 +16,5 @@ Table below shows an actual API resources used in application.
 | :-------: | :-----------------------------------: |
 |  `user`   |  https://fakestoreapi.com/users/:id   |
 | `product` | https://fakestoreapi.com/products/:id |
+
+- where `id=[integer]`
