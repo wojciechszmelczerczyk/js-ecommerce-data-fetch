@@ -14,9 +14,9 @@ const highestCartValue = async () => {
       _.map(carts, async ({ userId, products }) => {
         const { name } = await getOne(process.env.USERS_URL, userId);
         const prices = await Promise.all(
-          _.map(products, async ({ productId }) => {
+          _.map(products, async ({ productId, quantity }) => {
             const { price } = await getOne(process.env.PRODUCTS_URL, productId);
-            return price;
+            return price * quantity;
           })
         );
         const totalPrice = prices.reduce((acc, curr) => acc + curr, 0);

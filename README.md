@@ -7,6 +7,7 @@ Software which fetch e-commerce like data and perform logic on it.
 ## Table of contents
 
 - [Techstack](#techstack)
+- [Prerequisities](#prerequisities)
 - [Libraries](#libraries)
 - [API](#api)
 - [Utils](#utils)
@@ -16,6 +17,10 @@ Software which fetch e-commerce like data and perform logic on it.
 ## Techstack
 
 - `JavaScript`
+
+## Prerequisities
+
+- `Node.js`
 
 ## Libraries
 
@@ -87,3 +92,18 @@ npm run start
 ```
 
 ## Tests
+
+Table below represents docs for unit tests.
+
+|           Unit tests            |
+| :-----------------------------: |
+| [`getAll`](./docs/tests/all.md) |
+| [`getOne`](./docs/tests/one.md) |
+
+### To run
+
+Run unit tests.
+
+```sh
+npm run test
+```

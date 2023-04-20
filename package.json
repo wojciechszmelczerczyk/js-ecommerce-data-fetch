@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon .",
-    "test": "jest"
+    "test": "jest --watchAll"
   },
-  "keywords": [],
+  "keywords": [
+    "rest",
+    "fakestoreapi",
+    "javascript"
+  ],
   "author": "Wojciech Szmelczerczyk <szmelczerczykwojciech@gmail.com>",
   "license": "ISC",
   "dependencies": {

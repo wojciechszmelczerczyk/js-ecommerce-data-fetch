@@ -14,7 +14,6 @@ const getAll = async (resource) => {
 
     return data;
   } catch (err) {
-    console.error("Error fetching products data:", err);
     throw err;
   }
 };
