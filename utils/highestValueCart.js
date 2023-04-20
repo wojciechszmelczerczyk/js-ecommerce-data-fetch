@@ -32,6 +32,7 @@ const highestCartValue = async () => {
     return highestValueCart;
   } catch (err) {
     console.log(err.message);
+    throw err;
   }
 };
 
