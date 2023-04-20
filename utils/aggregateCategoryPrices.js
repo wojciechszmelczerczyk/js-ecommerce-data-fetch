@@ -5,20 +5,25 @@ const _ = require("lodash");
 config();
 
 const aggregateCategoryPrices = async () => {
-  const products = await getAll(process.env.PRODUCTS_URL);
+  try {
+    const products = await getAll(process.env.PRODUCTS_URL);
 
-  // pick only category and price from product schema
-  const productsWithCategoryAndPrice = _.map(products, (product) =>
-    _.pick(product, ["category", "price"])
-  );
+    // pick only category and price from product schema
+    const productsWithCategoryAndPrice = _.map(products, (product) =>
+      _.pick(product, ["category", "price"])
+    );
 
-  // sum prices for specific categories
-  const res = _(productsWithCategoryAndPrice)
-    .groupBy("category")
-    .map((items, category) => ({ category, total: _.sumBy(items, "price") }))
-    .value();
+    // sum prices for specific categories
+    const res = _(productsWithCategoryAndPrice)
+      .groupBy("category")
+      .map((items, category) => ({ category, total: _.sumBy(items, "price") }))
+      .value();
 
-  return res;
+    return res;
+  } catch (err) {
+    console.log(err.message);
+    throw err;
+  }
 };
 
 module.exports = aggregateCategoryPrices;
