@@ -125,7 +125,7 @@ const aggregateCategoryPrices = async () => {
     _.pick(product, ["category", "price"])
   );
 
-  // sum prices for specific categories
+  // group by category and sum prices for this category
   const res = _(productsWithCategoryAndPrice)
     .groupBy("category")
     .map((items, category) => ({ category, total: _.sumBy(items, "price") }))

@@ -27,7 +27,7 @@ To display user with highest cart value I had to call `carts` API. Next iterate 
 
 ## Output data
 
-Result present credentials of user who has highest cart value.
+Result present credentials of user who has highest cart value as well as total price of products.
 
 <details>
 

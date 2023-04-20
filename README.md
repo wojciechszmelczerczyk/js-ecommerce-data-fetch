@@ -24,9 +24,11 @@ Software which fetch e-commerce like data and perform logic on it.
 
 ## API
 
-Table below present functions which are responsible for data fetching.
+Table below presents functions which are responsible for data fetching from REST API.
 
+`Resources` is only name convention here to generalize usage of an API endpoints.
 
+You can click specific endpoint in order to get more in-depth information about usage.
 
 | METHOD |               Endpoint                |
 | :----: | :-----------------------------------: |
@@ -35,7 +37,7 @@ Table below present functions which are responsible for data fetching.
 
 ## Utils
 
-Table below show util functions which perform logic on fetched data.
+Table below shows util functions which perform logic on data fetched from an API.
 
 |                                   Function                                   |
 | :--------------------------------------------------------------------------: |

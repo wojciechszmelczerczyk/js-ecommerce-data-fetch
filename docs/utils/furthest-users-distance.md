@@ -250,7 +250,7 @@ Furthest distance between users calculated by geolocation points.
 
 ## Output data
 
-Result present furthest distance between users and their full name credentials.
+Result presents furthest distance between users and their full name credentials.
 
 <details>
 
