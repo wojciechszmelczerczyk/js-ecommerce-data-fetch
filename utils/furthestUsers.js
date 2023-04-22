@@ -29,15 +29,25 @@ const furthestUsers = async () => {
 
     for (let i = 0; i < usersWithGeolocation.length; i++) {
       for (let j = i + 1; j < usersWithGeolocation.length; j++) {
+        const {
+          address: { geolocation: geolocation1 },
+          name: name1,
+        } = usersWithGeolocation[i];
+
+        const {
+          address: { geolocation: geolocation2 },
+          name: name2,
+        } = usersWithGeolocation[j];
+
         const distanceBetweenUsers = getDistanceBetween(
-          usersWithGeolocation[i]["address"]["geolocation"],
-          usersWithGeolocation[j]["address"]["geolocation"]
+          geolocation1,
+          geolocation2
         );
 
         if (maxDistance < distanceBetweenUsers)
           maxDistance = distanceBetweenUsers;
-        firstUser = usersWithGeolocation[i]["name"];
-        secondUser = usersWithGeolocation[j]["name"];
+        firstUser = name1;
+        secondUser = name2;
       }
     }
 
