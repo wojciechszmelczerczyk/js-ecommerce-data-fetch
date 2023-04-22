@@ -26,7 +26,7 @@ const getOne = async (resource, resourceId) => {
 
     return data;
   } catch (err) {
-    throw err;
+    return err.message;
   }
 };
 
