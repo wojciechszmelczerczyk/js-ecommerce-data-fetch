@@ -103,7 +103,7 @@ Table below represents docs for unit tests.
 
 ### To run
 
-Run unit tests.
+Run tests.
 
 ```sh
 npm run test

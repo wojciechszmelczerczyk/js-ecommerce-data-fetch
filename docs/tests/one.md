@@ -2,7 +2,7 @@
 
 ## Description
 
-Test units for user and product endpoints. In general tests include couple cases:
+Tests for user and product endpoints. In general tests include couple cases:
 
 - user's credentials should match expected credentials, if provided id is correct.
 - should prompt an error, if resource with provided id doesn't exists.
