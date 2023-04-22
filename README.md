@@ -86,7 +86,7 @@ USERS_URL=users
 CARTS_DATE_QUERY_STR=?startdate=2000-01-01&enddate=2023-04-07
 ```
 
-Project use `CommonJS` syntax, so export is not supported. <br />
+Project use `CommonJS` syntax, so export is not supported.
 Please change node_modules/geolocation-distance-between/lib/index.js line 54 from `export` to `module.exports =`.
 
 Run server.
